@@ -10,6 +10,8 @@ module.exports = function (params) {
 		expression: [
 			'allof',
 			['match', '*'],
+            ['not', ['dirname', 'node_modules']],
+			['not', ['dirname', '.git']],
 		],
 		fields: ['name', 'size', 'exists', 'type']
 	};
