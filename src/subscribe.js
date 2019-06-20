@@ -12,6 +12,8 @@ module.exports = function (params) {
 			['match', '*'],
             ['not', ['dirname', 'node_modules']],
 			['not', ['dirname', '.git']],
+            ['not', ['dirname', 'example']],
+            ['not', ['dirname', 'examples']],
 		],
 		fields: ['name', 'size', 'exists', 'type']
 	};
